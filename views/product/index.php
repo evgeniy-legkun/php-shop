@@ -29,7 +29,7 @@
                                         </a>
 
                                     </span>
-                                    <p><b>Наличие:</b>
+                                    <p><b>Наличие: </b>
                                         <?php echo Product::getAvailabilityText($product['availability']); ?>
                                     </p>
                                     <p><b>Состояние:</b> Новое</p>

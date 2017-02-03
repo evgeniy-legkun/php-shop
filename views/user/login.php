@@ -24,7 +24,7 @@
                     </form>
                 </div>
 
-                <?php for ($i = 0; $i < 12; $i++) echo '<br />' ?>
+                <?php for ($i = 0; $i < 15; $i++) echo '<br />' ?>
 
             </div>
         </div>

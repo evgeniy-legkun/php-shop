@@ -7,7 +7,7 @@ class User
     {
         $db = Db::getConnection();
 
-        $sql = 'INSERT INTO `first_store`.`user` (`id`, `name`, `email`, `password`)'.
+        $sql = 'INSERT INTO user (id, name, email, password)'.
                 'VALUES (NULL, :name, :email, :password);';
 
         $result = $db->prepare($sql);//подготовка запроса к запуску посредством execute()
@@ -94,7 +94,7 @@ class User
     {
         $db = Db::getConnection();
 
-        $sql = 'SELECT * FROM `first_store`.`user` WHERE email= :email';
+        $sql = 'SELECT * FROM user WHERE email= :email';
 
         $result = $db->prepare($sql);
         $result->bindParam(':email', $email, PDO::PARAM_STR);//замена плейсхолдера параметром

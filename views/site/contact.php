@@ -6,7 +6,9 @@
             <div class="col-sm-4 col-sm-offset-4 padding-right">
 
                 <?php if ($result): ?>
-                    <p>Сообщение отправлено ! Мы ответим вам на указанный email.</p>
+                    <br />
+                    <h5>Сообщение отправлено ! Мы ответим вам на указанный email</h5>
+                    <?php for ($i = 0; $i < 14; $i++) echo '<br />'; ?>
                 <?php else: ?>
                     <!--Вывод информации об ошибках-->
                     <?php if (isset($errors) && is_array($errors)): ?>

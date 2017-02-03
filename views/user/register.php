@@ -33,7 +33,7 @@
                     </form>
                 </div>
 
-                <?php for ($i = 0; $i < 12; $i++) echo '<br />' ?>
+                <?php for ($i = 0; $i < 10; $i++) echo '<br />' ?>
 
             </div>
         </div>
