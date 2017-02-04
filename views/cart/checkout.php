@@ -13,7 +13,8 @@
                         <?php if ($result): ?>
                             <br />
                             <h4>Заказ оформлен :) </h4>
-                            <h4>Ожидайте SMS-сообщение с номером декларации.</h4>
+                            <h4>Для уточнения деталей наш менеджер вам передзвонит
+                                на указанный номер.</h4>
                             <h4>Спасибо за покупку ! <i class="fa fa-smile-o "></i></h4>
                         <?php else: ?>
                             <!--Вывод информации об ошибках-->
@@ -27,20 +28,41 @@
                         <br/>
                         <h5>Выбрано товаров: общее количество <?php echo $totalQuantity; ?> шт.
                             на сумму <?php echo $totalPrice; ?> USD.</h5>
-                        <p>Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
+                        <p>Для оформления заказа заполните форму.</p>
                         <!--Вывод формы-->
                         <div class="login-form">
                             <form action="#" method="post">
                                 <br/>
-                                <h5>Ваше имя: </h5>
+                                <label>Ваше имя: </label>
                                 <input type="text" name="userName" placeholder="" value="<?php echo $userName; ?>"/>
-                                <h5>Номер телефона:</h5>
+
+                                <label>Номер телефона:</label>
                                 <input type="number" name="userPhone" placeholder=""
                                        value="<?php echo $userPhone; ?>"/>
-                                <h5>Комментарий к заказу</h5>
+                                <p>
+                                    <label>Город:</label>
+                                    <select name="userCity" title="Выберите город доставки" required>
+                                        <option value="0" selected></option>
+                                        <option value="1">Винница</option>
+                                        <option value="2">Хмельницкий</option>
+                                        <option value="3">Киев</option>
+                                        <option value="4">Харьков</option>
+                                        <option value="5">Одесса</option>
+                                        <option value="6">Львов</option>
+                                        <option value="7">Кировоград</option>
+                                        <option value="8">Тернополь</option>
+                                        <option value="9">Черкасы</option>
+                                    </select>
+                                </p>
+
+                                <label>Адрес:</label>
+                                <input type="text" name="userAddress" placeholder="Улица, дом" />
+
+                                <label>Комментарий к заказу</label>
                                 <textarea name="userComment" placeholder="Сообщение"></textarea>
                                 <br/><br/><br/>
-                                <input type="submit" name="submit" class="btn btn-default" value="Оформить"/>
+
+                                <input type="submit" name="submit" class="btn btn-default" value="Оформить" />
                                 <br/><br/>
                             </form>
                         </div>

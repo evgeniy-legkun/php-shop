@@ -62,6 +62,8 @@ class AdminOrderController extends AdminBase
             //получаем данные из формы
             $options['user_name'] = $_POST['user_name'];
             $options['user_phone'] = $_POST['user_phone'];
+            $options['user_city'] = $_POST['user_city'];
+            $options['user_address'] = $_POST['user_address'];
             $options['user_comment'] = $_POST['user_comment'];
             $options['date'] = $_POST['date'];
             $options['status'] = $_POST['status'];

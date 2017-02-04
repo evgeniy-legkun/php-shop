@@ -25,6 +25,24 @@
                         <input type="number" name="user_phone" placeholder=""
                                value="<?php echo $order['user_phone']; ?>"/>
 
+                        <h5>Город</h5>
+                        <select name="user_city" title="Город доставки">
+                            <option value="0" <?php if ($order['city_delivery'] == 0) echo 'selected'; ?>></option>
+                            <option value="1" <?php if ($order['city_delivery'] == 1) echo 'selected'; ?>>Винница</option>
+                            <option value="2" <?php if ($order['city_delivery'] == 2) echo 'selected'; ?>>Хмельницкий</option>
+                            <option value="3" <?php if ($order['city_delivery'] == 3) echo 'selected'; ?>>Киев</option>
+                            <option value="4" <?php if ($order['city_delivery'] == 4) echo 'selected'; ?>>Харьков</option>
+                            <option value="5" <?php if ($order['city_delivery'] == 5) echo 'selected'; ?>>Одесса</option>
+                            <option value="6" <?php if ($order['city_delivery'] == 6) echo 'selected'; ?>>Львов</option>
+                            <option value="7" <?php if ($order['city_delivery'] == 7) echo 'selected'; ?>>Кировоград</option>
+                            <option value="8" <?php if ($order['city_delivery'] == 8) echo 'selected'; ?>>Тернополь</option>
+                            <option value="9" <?php if ($order['city_delivery'] == 9) echo 'selected'; ?>>Черкасы</option>
+                        </select>
+
+                        <h5>Адрес:</h5>
+                        <input type="text" name="user_address" placeholder="Улица, дом"
+                               value="<?php echo $order['address']; ?>"/>
+
                         <h5>Комментарий клиента</h5>
                         <textarea name="user_comment"
                                   title="Комментарий клиента"><?php echo $order['user_comment']; ?></textarea>

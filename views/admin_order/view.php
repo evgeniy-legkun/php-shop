@@ -29,6 +29,14 @@
                             <td><?php echo $order['user_phone']; ?></td>
                         </tr>
                         <tr>
+                            <td>Город доставки</td>
+                            <td><?php echo Order::getCityText($order['city_delivery']); ?></td>
+                        </tr>
+                        <tr>
+                            <td>Адрес доставки</td>
+                            <td><?php echo $order['address']; ?></td>
+                        </tr>
+                        <tr>
                             <td>Коментарий клиента</td>
                             <td><?php echo $order['user_comment']; ?></td>
                         </tr>

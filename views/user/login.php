@@ -20,7 +20,7 @@
                         <input type="email" name="email" placeholder="E-mail" value="" />
                         <input type="password" name="password" placeholder="Пароль" value="" />
                         <br />
-                        <button type="submit" name="submit" class="btn btn-default">Регистрация</button>
+                        <button type="submit" name="submit" class="btn btn-default">Вход</button>
                     </form>
                 </div>
 

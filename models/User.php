@@ -72,6 +72,24 @@ class User
         return false;
     }
 
+    /*Проверяем выбран ли город доставки*/
+    public static function checkCity($userCity)
+    {
+        if ($userCity != 0){
+            return true;
+        }
+        return false;
+    }
+
+    /*Проверяет поле ввода адреса на пустоту*/
+    public static function checkAddress($userAddress)
+    {
+        if(strlen($userAddress) > 0){
+            return true;
+        }
+        return false;
+    }
+
     /*Проверяет есть ли email в базе*/
     public static function checkEmailExists($email)
     {

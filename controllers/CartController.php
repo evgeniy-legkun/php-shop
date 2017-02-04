@@ -57,6 +57,8 @@ class CartController
             // Считиваем данные формы
             $userName = $_POST['userName'];
             $userPhone = $_POST['userPhone'];
+            $userCity = $_POST['userCity'];
+            $userAddress = $_POST['userAddress'];
             $userComment = $_POST['userComment'];
             //Валидация полей
             $errors = false;
@@ -66,6 +68,13 @@ class CartController
             if (!User::checkPhone($userPhone)){
                 $errors[] = 'Длина номера должна быть от 10 до 12 символов';
             }
+            if (!User::checkCity($userCity)){
+                $errors[] = 'Не выбран город';
+            }
+            if (!User::checkAddress($userAddress)){
+                $errors[] = 'Не заполнено поле с адресом';
+            }
+
             //Форма заполнена корректно
             if ($errors == false){
                 //Получаем данные из корзины (сессии)
@@ -78,7 +87,7 @@ class CartController
                 }
                 //Сохраняем заказ в БД
                 //В result будет true  в случае успешного выполнения
-                $result = Order::save($userName, $userPhone, $userComment, $userId, $productsInCart);
+                $result = Order::save($userName, $userPhone, $userCity, $userAddress, $userComment, $userId, $productsInCart);
                 if ($result){ //если заказ отправлен
                     //Оповещаем администратора о новом заказе
                     $adminEmail = 'evgeniy_legkun@ukr.net';
